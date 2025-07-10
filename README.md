@@ -1,7 +1,7 @@
 Briefly
 =======
 
-![Build Status](https://github.com/CargoSense/briefly/actions/workflows/main.yml/badge.svg)
+This is a fork of https://github.com/CargoSense/briefly
 
 Simple, robust temporary file support for Elixir.
 
@@ -24,16 +24,6 @@ def deps do
 end
 ```
 
-or grab the latest with:
-
-```elixir
-{
-  :briefly,
-  git: "https://github.com/CargoSense/briefly",
-  ref: "2526e9674a4e6996137e066a1295ea60962712b8"
-  # "~> 0.4" https://github.com/CargoSense/briefly/issues/17
-}
-```
 
 Install it with `mix deps.get`.
 

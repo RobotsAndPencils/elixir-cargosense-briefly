@@ -70,8 +70,8 @@ defmodule Briefly.Entry do
   end
 
   defp ensure_tmp_dir(tmps) do
-    {mega, _, _} = :os.timestamp()
-    subdir = "briefly-" <> i(mega)
+    timestamp = System.os_time(:second)
+    subdir = "briefly-" <> i(timestamp)
     Enum.find_value(tmps, &write_tmp_dir(&1 <> subdir))
   end
 

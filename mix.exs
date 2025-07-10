@@ -3,10 +3,11 @@ defmodule Briefly.Mixfile do
 
   def project do
     [
+      name: :rnp_briefly,
       app: :briefly,
       version: "0.4.0",
-      elixir: "~> 1.11",
-      source_url: "https://github.com/CargoSense/briefly",
+      elixir: "~> 1.18",
+      source_url: "https://github.com/RobotsAndPencils/elixir-cargosense-briefly",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       package: package(),
@@ -18,7 +19,7 @@ defmodule Briefly.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :crypto], mod: {Briefly, []}, env: default_env()]
+    [extra_applications: [:logger, :crypto], mod: {Briefly, []}, env: default_env()]
   end
 
   # Dependencies can be Hex packages:
@@ -32,7 +33,7 @@ defmodule Briefly.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.36", only: :dev, runtime: false}
     ]
   end
 
