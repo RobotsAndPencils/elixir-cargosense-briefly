@@ -3,7 +3,6 @@ defmodule Briefly.Mixfile do
 
   def project do
     [
-      name: :rnp_briefly,
       app: :briefly,
       version: "0.5.0",
       elixir: "~> 1.18",
@@ -39,11 +38,12 @@ defmodule Briefly.Mixfile do
 
   defp package do
     [
+      name: :rnp_briefly,
       description: "Simple, robust temporary file support",
       files: ["lib", "config", "mix.exs", "README*", "LICENSE"],
-      contributors: ["Bruce Williams"],
-      licenses: ["Apache 2"],
-      links: %{github: "https://github.com/CargoSense/briefly"}
+      contributors: ["Bruce Williams", "Brad Pfannmuller"],
+      licenses: ["Apache-2.0"],
+      links: %{github: "https://github.com/RobotsAndPencils/elixir-cargosense-briefly"}
     ]
   end
 
